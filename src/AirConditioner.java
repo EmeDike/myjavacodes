@@ -20,7 +20,7 @@ public class AirConditioner {
 
     public void increaseTemperature() {
         temperature = 20;
-        if (temperature < 30) { // Corrected the comparison operator and value
+        if (temperature < 30) {
             temperature += 1;
         }
     }

@@ -13,10 +13,10 @@ public class SquareRootOfTwoNumbers {
         for (;;) {
             if (answer <= exponential) {
 
-                answer = answer * base; // Update answer by multiplying with base
+                answer = answer * base;
                 System.out.println(answer);
             } else {
-                break; // Exit the loop when answer exceeds exponential
+                break;
             }
         }
     }

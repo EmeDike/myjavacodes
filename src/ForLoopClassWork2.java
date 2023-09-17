@@ -4,9 +4,9 @@ public class ForLoopClassWork2 {
         for (;;) {
             if (number == 45) {
                 System.out.println("MELODY");
-                break; // Add a break statement to exit the loop
+                break;
             }
-            number--; // Decrement the number within the loop
+            number--;
             System.out.println(number);
         }
     }

@@ -10,10 +10,10 @@ public class NaturalNumbers {
         int count;
         Scanner dike = new Scanner(System.in);
         int digit = 0;
-        for (count = 1; count <= range; count++) {   //keep reading user input till range
+        for (count = 1; count <= range; count++) {
             System.out.println("ENTER A NUMBER");
             digit = dike.nextInt();
-            if (digit <= 0) {                   //checks for number < 0
+            if (digit <= 0) {
                 isNatural = false;
 
                 System.out.println("number is not natural number");
