@@ -69,10 +69,12 @@ public class MotoBike {
         acceleration = 35;
         if (gear == 3 && acceleration == 35){
             deceleration = acceleration - 3;
+            //deceleration = acceleration - 3
         }
     }
 
     public int checkdeceleration() {
         return deceleration;
+
     }
 }
