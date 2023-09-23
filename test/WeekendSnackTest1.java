@@ -1,0 +1,2 @@
+public class WeekendSnackTest1 {
+}
