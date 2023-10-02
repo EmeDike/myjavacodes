@@ -5,7 +5,6 @@ public class IndependenceArrayAssignment6 {
         int length = arr.length;
         int []result = new int[length];
         int sum = 0;
-        int runningTotal;
         for (int i = 0; i < arr.length; i++) {
             sum = sum + arr[i];
             result[i] = sum;
