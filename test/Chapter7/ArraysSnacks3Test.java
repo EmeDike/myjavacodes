@@ -13,5 +13,3 @@ public class ArraysSnacks3Test {
 
     }
     }
-
-}
