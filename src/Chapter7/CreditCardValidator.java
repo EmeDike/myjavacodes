@@ -4,16 +4,6 @@ import java.util.Scanner;
 
 public class CreditCardValidator {
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Kindly Enter Card Details To Verify: ");
-        String creditCardNumber = scanner.nextLine();
-        scanner.close();
-
-        String result = validateCreditCard(creditCardNumber);
-        System.out.println("Result: " + result);
-    }
-
     public static String validateCreditCard(String cardNumber){
 
         if (cardNumber.length() < 13 || cardNumber.length() > 16) {
@@ -24,20 +14,22 @@ public class CreditCardValidator {
         int totalSum = calculateTotalSum(cardNumber);
         boolean isValid = totalSum % 10 == 0;
 
-        return cardType + " - " + (isValid ? "Valid" : "Invalid");
+        return cardType + "\ncredit card number: " + cardNumber +
+                "\ncredit card digit length: " + cardNumber.length() +
+                "\ncredit card validity status: " + (isValid ? "valid" : "invalid");
     }
 
     private static String identifyCardType(String cardNumber) {
         if (cardNumber.startsWith("4")) {
-            return "Visa";
+            return "credit card type: Visa";
         } else if (cardNumber.startsWith("5")) {
-            return "MasterCard";
+            return "credit card type: MasterCard";
         } else if (cardNumber.startsWith("37")) {
-            return "American Express";
+            return "credit card type: American Express";
         } else if (cardNumber.startsWith("6")) {
-            return "Discover";
+            return "credit card type: Discover";
         } else {
-            return "Unknown Card Type";
+            return "credit card type: Unknown Card Type";
         }
     }
 
@@ -56,5 +48,15 @@ public class CreditCardValidator {
         }
 
         return totalSum;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Kindly Enter Card Details To Verify: ");
+        String creditCardNumber = scanner.nextLine();
+        scanner.close();
+
+        String result = validateCreditCard(creditCardNumber);
+        System.out.println("\nResult:\n" + result);
     }
 }
