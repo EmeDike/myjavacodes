@@ -1,5 +1,7 @@
 package Chapter7;
 
+import java.util.Arrays;
+
 public class ArraysSnacks2 {
     public static int[] reverseList(int[] arr) {
         int length = arr.length;
@@ -9,4 +11,13 @@ public class ArraysSnacks2 {
         }
         return reversedList;
     }
-}
+
+    public static void main(String[] args) {
+
+        int [] myList = {1, 2, 3, 4, 5};
+        int [] result = reverseList(myList);
+        System.out.println(Arrays.toString(result));
+
+        }
+
+    }

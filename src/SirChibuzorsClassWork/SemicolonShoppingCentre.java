@@ -77,6 +77,6 @@ public class SemicolonShoppingCentre {
                                 =============================================
                                 THIS IS NOT A RECEIPT. KINDLY PAY %.2f
                 """, subTotal, discountRate, vat, billTotal, billTotal);
-        System.out.println("");
+        System.out.println();
     }
 }

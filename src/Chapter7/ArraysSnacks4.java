@@ -1,12 +1,22 @@
 package Chapter7;
 
+import java.util.Arrays;
+
 public class ArraysSnacks4 {
     public static int[] oddPositionElements(int[] arr) {
-        int oddPositionLength = (arr.length + 1)/2;
-        int [] result = new int[oddPositionLength];
-        for (int i = 0; i < arr.length; i ++) {
-            result[i] = arr[i * 2 + 1];
+        int length = arr.length / 2;
+        int oddsIndex = 0;
+        int[] oddPosition = new int[length];
+        for (int i = 1; i <= arr.length; i += 2) {
+            oddPosition[oddsIndex] = arr[i];
+            oddsIndex ++;
         }
-        return result;
+        return oddPosition;
+    }
+
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5, 6, 7, 8};
+        int[] result = oddPositionElements(array);
+        System.out.println(Arrays.toString(result));
     }
 }
